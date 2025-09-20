@@ -1,12 +1,10 @@
 import abstractfactory.DrinksAbstractFactory;
-import abstractfactory.HotDrinksFactory;
-import abstractfactory.ColdDrinksFactory;
+import abstractfactory.FactoryProducer;
 import product.Drinks;
 
 public class Main {
     public static void main(String[] args) {
-
-        DrinksAbstractFactory hotFactory = new HotDrinksFactory();
+        DrinksAbstractFactory hotFactory = FactoryProducer.getHotFactory();
 
         Drinks coffee = hotFactory.createCoffee();
         coffee.prepare();
@@ -16,7 +14,7 @@ public class Main {
         tea.prepare();
         tea.serve();
 
-        DrinksAbstractFactory coldFactory = new ColdDrinksFactory();
+        DrinksAbstractFactory coldFactory = FactoryProducer.getColdFactory();
 
         Drinks juice = coldFactory.createJuice();
         juice.prepare();
