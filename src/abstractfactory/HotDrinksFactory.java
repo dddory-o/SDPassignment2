@@ -17,7 +17,6 @@ public class HotDrinksFactory extends DrinksAbstractFactory {
 
     @Override
     public Drinks createJuice() {
-        // Hot factory usually doesn’t create cold drinks
-        return null;
+        return null; // у горячих фабрика juice не делает
     }
 }

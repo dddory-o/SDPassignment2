@@ -6,12 +6,12 @@ import product.Juice;
 public class ColdDrinksFactory extends DrinksAbstractFactory {
     @Override
     public Drinks createCoffee() {
-        return null;
+        return null; // холодная фабрика не делает coffee
     }
 
     @Override
     public Drinks createTea() {
-        return null;
+        return null; // холодная фабрика не делает tea
     }
 
     @Override

@@ -1,10 +1,14 @@
+package client;
+
 import abstractfactory.DrinksAbstractFactory;
-import abstractfactory.FactoryProducer;
+import abstractfactory.HotDrinksFactory;
+import abstractfactory.ColdDrinksFactory;
 import product.Drinks;
 
 public class Main {
     public static void main(String[] args) {
-        DrinksAbstractFactory hotFactory = FactoryProducer.getFactory("HOT");
+        // Используем фабрику горячих напитков
+        DrinksAbstractFactory hotFactory = new HotDrinksFactory();
 
         Drinks coffee = hotFactory.createCoffee();
         coffee.prepare();
@@ -14,8 +18,8 @@ public class Main {
         tea.prepare();
         tea.serve();
 
-        // Получаем фабрику холодных напитков
-        DrinksAbstractFactory coldFactory = FactoryProducer.getFactory("COLD");
+        // Используем фабрику холодных напитков
+        DrinksAbstractFactory coldFactory = new ColdDrinksFactory();
 
         Drinks juice = coldFactory.createJuice();
         juice.prepare();
