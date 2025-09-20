@@ -1,5 +1,3 @@
-package client;
-
 import abstractfactory.DrinksAbstractFactory;
 import abstractfactory.HotDrinksFactory;
 import abstractfactory.ColdDrinksFactory;
